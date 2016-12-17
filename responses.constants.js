@@ -6,7 +6,7 @@ module.exports = {
   WHO_IS_LINCOLN: {
     type: 'single',
     content: `
-      Lincoln was the sixteen president of the United States, who served from 1861 to 1865.'
+      Lincoln was the sixteenth president of the United States, who served from 1861 to 1865.'
     `
   },
   RANDOM_FACTS: {
