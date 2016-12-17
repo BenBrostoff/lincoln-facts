@@ -8,7 +8,8 @@
   "scripts": {
     "start": "node app.js",
     "monitor": "nodemon app.js",
-    "lint": "./node_modules/.bin/eslint ."
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
     "actions-on-google": "^1.0.0",
@@ -20,7 +21,8 @@
   },
   "devDependencies": {
     "eslint": "^3.12.2",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.2.0"
   },
   "eslintConfig": {
     "extends": "airbnb-base",
