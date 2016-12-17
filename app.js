@@ -17,7 +17,3 @@ app.post('/', (request, response) => {
 });
 
 app.listen(app.get('port'));
-
-module.exports = {
-  getActionMap
-};

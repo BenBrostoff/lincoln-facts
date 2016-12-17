@@ -16,8 +16,8 @@ const getActionMap = () => {
   });
 
   return map;
-}
+};
 
 module.exports = {
-  getActionMap
-}
+  getActionMap,
+};

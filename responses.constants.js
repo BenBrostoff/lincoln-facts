@@ -30,6 +30,14 @@ module.exports = {
       his cabinet.
     `,
   },
+  BORN: {
+    type: 'single',
+    content: 'Lincoln was born in Hodgenville, Kentucky on February 12th, 1809.',
+  },
+  MARRIED: {
+    type: 'single',
+    content: 'Lincoln was married to Mary Todd Lincoln on November 4th, 1842. It was the beginning of an at times rocky relationship.',
+  },
   METADATA: {
     type: 'single',
     content:
