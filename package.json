@@ -7,12 +7,42 @@
   "author": "Ben Brostoff",
   "scripts": {
     "start": "node app.js",
-    "monitor": "nodemon app.js"
+    "monitor": "nodemon app.js",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "dependencies": {
+    "actions-on-google": "^1.0.0",
     "body-parser": "^1.15.2",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
     "express": "^4.13.4",
-    "sprintf-js": "^1.0.3",
-    "actions-on-google": "^1.0.0"
+    "sprintf-js": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "no-param-reassign": [
+        "error",
+        {
+          "props": false
+        }
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "**/*.spec.js"
+          ]
+        }
+      ]
+    }
   }
 }
