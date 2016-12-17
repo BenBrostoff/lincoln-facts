@@ -19,10 +19,12 @@ app.post('/', function (request, response) {
   console.log('headers: ' + JSON.stringify(request.headers));
   console.log('body: ' + JSON.stringify(request.body));
 
-  const assistant = new Assistant.ApiAiAssistant({request, response});
+  const assistant = new Assistant.ApiAiAssistant({ request, response });
   const actionMap = new Map();
   Object.keys(RESPONSES).forEach((k) => {
     const res = RESPONSES[k];
+    console.log(k, RESPONSES[k]);
+    console.log(res);
     if (res.type === 'single') {
       actionMap.set(k, (a) => a.tell(res.content));
     }
