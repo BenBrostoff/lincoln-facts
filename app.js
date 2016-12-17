@@ -26,8 +26,9 @@ app.post('/', function (request, response) {
     console.log(k, RESPONSES[k]);
     console.log(res);
     if (res.type === 'single') {
-      actionMap.set(k, (a) => a.tell(res.content));
+      actionMap.set(k, (a) => a.tell("Respond."));
     }
+    actionMap.set('WHO_IS_LINCOLN', (a) => a.tell('Blah'))
 
     if (res.type === 'multi') {
       actionMap.set(k, (a) => a.tell(getRand(res.content)));
