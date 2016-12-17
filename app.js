@@ -1,6 +1,3 @@
-'use strict';
-
-// Enable actions client library debugging
 process.env.DEBUG = 'actions-on-google:*';
 
 const Assistant = require('actions-on-google');
@@ -23,12 +20,9 @@ app.post('/', function (request, response) {
   const actionMap = new Map();
   Object.keys(RESPONSES).forEach((k) => {
     const res = RESPONSES[k];
-    console.log(k, RESPONSES[k]);
-    console.log(res);
     if (res.type === 'single') {
-      actionMap.set(k, (a) => a.tell("Respond."));
+      actionMap.set(k, (a) => a.tell(res.content));
     }
-    actionMap.set('WHO_IS_LINCOLN', (a) => a.tell('Blah'))
 
     if (res.type === 'multi') {
       actionMap.set(k, (a) => a.tell(getRand(res.content)));
@@ -36,7 +30,6 @@ app.post('/', function (request, response) {
   });
 
   assistant.handleRequest(actionMap);
-  console.log('Success.')
 });
 
 // Start the server

@@ -1,8 +1,12 @@
 module.exports = {
+  WELCOME: {
+    type: 'single',
+    content: 'Welcome to the Lincoln Facts app! Ask me for a random fact about Lincoln!',
+  },
   WHO_IS_LINCOLN: {
     type: 'single',
     content: `
-      Lincoln was the sixteen president of the United States, who served from 1861 to 1861.'
+      Lincoln was the sixteen president of the United States, who served from 1861 to 1865.'
     `
   },
   RANDOM_FACTS: {
