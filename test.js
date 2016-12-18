@@ -1,11 +1,11 @@
-const assert = require('assert');
+const { expect } = require('chai');
 const { getActionMap } = require('./actions');
 
 
 describe('App', () => {
   describe('#getActionMap()', () => {
     it('should return a map', () => {
-      assert.equal(typeof getActionMap(), 'object');
+      expect(getActionMap()).to.be.an.instanceOf(Map);
     });
   });
 });
